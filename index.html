@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Democratizing AI for College Graduates - Job Search Playbook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #4338CA;
+            --secondary: #10B981;
+            --accent: #F59E0B;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --gray: #6B7280;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/></svg>');
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0) rotate(0deg); }
+            to { transform: translateY(-100px) rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            opacity: 0.95;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 80px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .section-header {
+            background: var(--gradient);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card h4 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+        }
+
+        /* Code Blocks */
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 25px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Checkboxes */
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 35px;
+            margin: 12px 0;
+        }
+
+        .checklist li::before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 5px 5px 5px 0;
+        }
+
+        .badge-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .badge-success {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .badge-warning {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Alert Boxes */
+        .alert {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid;
+        }
+
+        .alert-info {
+            background: #EFF6FF;
+            border-color: #3B82F6;
+            color: #1E40AF;
+        }
+
+        .alert-success {
+            background: #ECFDF5;
+            border-color: #10B981;
+            color: #065F46;
+        }
+
+        .alert-warning {
+            background: #FFFBEB;
+            border-color: #F59E0B;
+            color: #92400E;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        th {
+            background: var(--gradient);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: #F9FAFB;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design - Mobile First */
+        @media (max-width: 768px) {
+            /* Hero */
+            .hero {
+                padding: 60px 15px 40px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            /* Navigation */
+            nav {
+                position: relative; /* Remove sticky on mobile for better UX */
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .nav-title {
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+                padding: 8px 12px;
+                background: var(--light);
+                border-radius: 6px;
+                border: 1px solid #E5E7EB;
+            }
+
+            /* Container */
+            .container {
+                padding: 40px 15px;
+            }
+
+            /* Section Headers */
+            .section-header {
+                padding: 20px 15px;
+                margin-bottom: 25px;
+            }
+
+            .section-header h2 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            /* Cards */
+            .card {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .card h3 {
+                font-size: 1.4rem;
+                line-height: 1.3;
+            }
+
+            .card h4 {
+                font-size: 1.1rem;
+                margin: 20px 0 12px;
+            }
+
+            /* Code Blocks */
+            .code-block {
+                padding: 15px;
+                font-size: 0.8rem;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            /* Lists */
+            ul, ol {
+                margin-left: 20px;
+                padding-right: 10px;
+            }
+
+            /* Checklist */
+            .checklist li {
+                padding-left: 30px;
+                font-size: 0.95rem;
+            }
+
+            .checklist li::before {
+                font-size: 1.2rem;
+            }
+
+            /* Badges */
+            .badge {
+                font-size: 0.75rem;
+                padding: 4px 10px;
+                margin: 3px 2px;
+            }
+
+            /* Alerts */
+            .alert {
+                padding: 15px;
+                font-size: 0.95rem;
+            }
+
+            /* Timeline */
+            .timeline {
+                padding-left: 30px;
+            }
+
+            .timeline::before {
+                left: 8px;
+            }
+
+            .timeline-item::before {
+                left: -26px;
+                width: 12px;
+                height: 12px;
+            }
+
+            /* Tables - Make them scrollable */
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+
+            /* Footer */
+            footer {
+                padding: 30px 15px;
+            }
+
+            footer p {
+                font-size: 0.95rem;
+            }
+
+            /* Scroll to top button */
+            .scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .code-block {
+                font-size: 0.75rem;
+                padding: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 6px 10px;
+            }
+        }
+
+        /* Tablet */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 50px 30px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+        }
+
+        /* Touch device improvements */
+        @media (hover: none) and (pointer: coarse) {
+            /* Larger touch targets */
+            a, button {
+                min-height: 44px;
+                min-width: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                padding: 12px 16px;
+            }
+
+            .scroll-top {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>🚀 Democratizing AI for College Graduates</h1>
+            <p class="hero-subtitle">The Complete Job Search Playbook</p>
+            <p class="hero-description">Using Claude AI + Harvard Career Services Framework to Level the Playing Field</p>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                <span class="badge badge-primary">AI-Powered</span>
+                <span class="badge badge-success">Harvard-Backed</span>
+                <span class="badge badge-warning">100% Free</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-title">📚 Job Search Playbook</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#phase0">Pre-Launch</a>
+                <a href="#phase1">Foundation</a>
+                <a href="#phase2">Applications</a>
+                <a href="#phase3">Intelligence</a>
+                <a href="#phase4">Interviews</a>
+                <a href="#phase5">Follow-Up</a>
+                <a href="#phase6">Offers</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>📖 About This Guide</h2>
+                <p>Your comprehensive toolkit for landing your dream job</p>
+            </div>
+
+            <div class="card">
+                <h3>Why This Matters</h3>
+                <p>This comprehensive guide teaches college students and early-career professionals how to use AI tools (primarily Claude and Perplexity) to compete at the highest level in their job search—regardless of their background, network, or resources.</p>
+                
+                <div class="alert alert-info" style="margin-top: 20px;">
+                    <strong>💡 The Democratization Opportunity:</strong> First-generation college students have significantly smaller professional networks than peers with college-educated parents. AI tools democratize access to expert-level career guidance that was previously only available through expensive career coaches, strong family networks, or elite university connections.
+                </div>
+
+                <h4>Your Mission</h4>
+                <p>Use this playbook to gain the AI toolkit needed to compete at the highest level in your job search.</p>
+
+                <h4>Key Statistics</h4>
+                <ul>
+                    <li>Only <strong>24%</strong> of candidates send thank-you emails, yet <strong>68%</strong> of hiring managers say it affects decisions</li>
+                    <li>Candidates who negotiate salary see an average <strong>18.8% increase</strong>, yet <strong>55%</strong> never try</li>
+                    <li><strong>95%</strong> of recruiters use LinkedIn to find candidates</li>
+                    <li>Average job search takes <strong>5-6 months</strong> for entry-level positions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Phase 0: Pre-Launch -->
+        <section id="phase0" class="section">
+            <div class="section-header">
+                <h2>PHASE 0: PRE-LAUNCH</h2>
+                <p>Optimize your online presence before you start applying</p>
+            </div>
+
+            <div class="card">
+                <h3>A. LinkedIn Profile Optimization</h3>
+                
+                <h4>Why This Matters</h4>
+                <ul>
+                    <li><strong>95%</strong> of recruiters use LinkedIn to find candidates</li>
+                    <li>Profiles with photos get <strong>21x more views</strong></li>
+                    <li>Custom URLs improve SEO and professionalism</li>
+                </ul>
+
+                <h4>LinkedIn Optimization Prompt</h4>
+                <div class="code-block">I need to optimize my LinkedIn profile to maximize recruiter visibility and job opportunities. Using my resume (already uploaded), help me create optimized content for each section:
+
+**CURRENT LINKEDIN PROFILE:**
+[Paste your current About section, headline, experience bullets]
+
+**TARGET ROLES:**
+[List 3-5 job titles you're targeting]
+
+---
+
+Please provide:
+
+1. **HEADLINE OPTIMIZATION** (220 characters max)
+2. **ABOUT SECTION REWRITE** (2,600 characters max)
+3. **EXPERIENCE SECTION OPTIMIZATION**
+4. **SKILLS SECTION STRATEGY** (Max 50 skills)
+5. **FEATURED SECTION CONTENT IDEAS**
+6. **CUSTOM URL**</div>
+
+                <h4>LinkedIn Profile Checklist</h4>
+                <ul class="checklist">
+                    <li>Professional headshot (not a selfie, neutral background)</li>
+                    <li>Custom banner image showing expertise or personal brand</li>
+                    <li>Custom URL (linkedin.com/in/yourname)</li>
+                    <li>"Open to Work" badge enabled (visible to recruiters only)</li>
+                    <li>Headline optimized with keywords (not just "Student at X")</li>
+                    <li>About section tells a story, not just lists qualifications</li>
+                    <li>All experience bullets quantified and keyword-rich</li>
+                    <li>Skills section filled (50 skills max, prioritized correctly)</li>
+                    <li>3+ LinkedIn recommendations</li>
+                    <li>Featured section populated with best work</li>
+                    <li>Contact info fully filled out</li>
+                    <li>Creator mode ON</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>B. Social Media Audit & Online Presence</h3>
+                
+                <div class="alert alert-warning">
+                    <strong>⚠️ Pro Tip:</strong> Employers Google <strong>70% of candidates</strong> before hiring. What they find matters.
+                </div>
+
+                <h4>Google Yourself Prompt</h4>
+                <div class="code-block">I'm about to start applying for jobs and need to audit my online presence. Help me create a cleanup checklist.
+
+**MY INFORMATION:**
+Full Name: [Name]
+LinkedIn: [URL]
+Other social media: [Twitter/X, Instagram, Facebook, TikTok, etc.]
+Personal website/portfolio: [If exists]
+GitHub: [If exists]
+
+Please provide:
+1. **GOOGLE SEARCH CHECKLIST**
+2. **SOCIAL MEDIA CLEANUP STRATEGY**
+3. **PROFESSIONAL PRESENCE BUILDING**
+4. **PRIVACY SETTINGS CHECKLIST**
+5. **POSITIVE CONTENT STRATEGY**</div>
+            </div>
+
+            <div class="card">
+                <h3>C. Portfolio & GitHub Setup</h3>
+                <p><em>For Technical/Creative Roles</em></p>
+
+                <h4>GitHub Portfolio Setup Prompt</h4>
+                <div class="code-block">I'm in [field: software development/data science/UX design/etc.] and need to create a professional GitHub portfolio.
+
+**MY CURRENT SITUATION:**
+- GitHub username: [username or "need to create"]
+- Number of public repos: [X]
+- Projects I've completed: [List 3-5]
+- Languages/tools I know: [List]
+
+Please help me with:
+1. **PORTFOLIO STRATEGY**
+2. **GITHUB PROFILE README CONTENT**
+3. **REPOSITORY OPTIMIZATION**
+4. **PINNED REPOS STRATEGY**
+5. **CONTRIBUTION GRAPH STRATEGY**
+6. **PORTFOLIO WEBSITE** (If applicable)</div>
+
+                <h4>For Non-Technical Portfolios</h4>
+                <ul>
+                    <li><strong>Writers:</strong> Medium blog, personal website with clips</li>
+                    <li><strong>Designers:</strong> Behance, Dribbble, personal portfolio site</li>
+                    <li><strong>Marketers:</strong> Case studies on LinkedIn, published articles</li>
+                    <li><strong>Video/Content Creators:</strong> YouTube channel, Vimeo reel</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Phase 1: Foundation -->
+        <section id="phase1" class="section">
+            <div class="section-header">
+                <h2>PHASE 1: FOUNDATION & SETUP</h2>
+                <p>Build your AI command center</p>
+            </div>
+
+            <div class="card">
+                <h3>1. Why This Matters: The Democratization Opportunity</h3>
+                
+                <h4>The Networking Advantage Gap</h4>
+                <p>First-generation college students have <strong>significantly smaller professional networks</strong> than peers with college-educated parents. This creates measurable disadvantage in job searching.</p>
+
+                <h4>The AI Solution</h4>
+                <p><strong>AI tools like Claude democratize access</strong> to expert-level career guidance that was previously only available through:</p>
+                <ul>
+                    <li>Expensive career coaches ($100-300/hour)</li>
+                    <li>Strong family professional networks</li>
+                    <li>Alumni connections at elite universities</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>2. Infrastructure Setup: Your AI Command Center</h3>
+                
+                <h4>Create Your Job Search Claude Project</h4>
+                
+                <div class="alert alert-success">
+                    <strong>✨ Why Projects Matter:</strong>
+                    <ul style="margin-top: 10px; margin-bottom: 0;">
+                        <li><strong>200K context window</strong> = 500-page book of information</li>
+                        <li>Upload documents <strong>once</strong>, use them in every conversation</li>
+                        <li>No more repeating yourself or re-uploading resume</li>
+                    </ul>
+                </div>
+
+                <h4>Setup Instructions</h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4 style="margin-top: 0;">Step 1: Create New Project</h4>
+                        <p>Go to claude.ai (free tier works, Pro recommended for heavy usage)</p>
+                        <p>Click "Projects" → "Create Project"</p>
+                        <p>Name it: "Job Search 2025 - [Your Name]"</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4 style="margin-top: 0;">Step 2: Upload Core Documents</h4>
+                        <ul class="checklist">
+                            <li>Master Resume (Word & PDF versions)</li>
+                            <li>Resume variations (if targeting different roles)</li>
+                            <li>Harvard Resume & Cover Letter Guide</li>
+                            <li>Unofficial transcripts</li>
+                            <li>Portfolio work samples</li>
+                            <li>List of achievements with quantified results</li>
+                            <li>Past successful cover letters (if any)</li>
+                            <li>Certifications or credentials</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4 style="margin-top: 0;">Step 3: Set Custom Instructions</h4>
+                        <div class="code-block">You are an expert career advisor specializing in entry-level positions for recent college graduates and early-career professionals. Your guidance follows Harvard Career Services best practices.
+
+CORE PRINCIPLES:
+- Always use action verbs from the Harvard guide for resume bullets
+- Ask for the job description before generating tailored content
+- Avoid dramatic, flowery, or overly formal language
+- Keep tone professional, confident, and authentic
+- Provide specific, actionable advice with examples</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4 style="margin-top: 0;">Step 4: Test Your Setup</h4>
+                        <div class="code-block">Review my uploaded resume and identify:
+1. My top 3 strongest qualifications
+2. Areas where I could add more quantified results
+3. Which experiences would work best as STAR stories
+4. Any formatting improvements needed for ATS systems</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 2: Applications -->
+        <section id="phase2" class="section">
+            <div class="section-header">
+                <h2>PHASE 2: APPLICATION MATERIALS</h2>
+                <p>Create compelling resumes and cover letters</p>
+            </div>
+
+            <div class="card">
+                <h3>3. Resume & Cover Letter Creation</h3>
+                
+                <h4>Harvard Resources Available</h4>
+                <p>Harvard Career Services provides <strong>free, publicly accessible PDF guides</strong>:</p>
+                <ul>
+                    <li>Action verb lists by category</li>
+                    <li>Multiple resume templates</li>
+                    <li>Cover letter structure frameworks</li>
+                    <li>Guidelines for tailoring documents</li>
+                </ul>
+
+                <h4>Resume Optimization Prompt</h4>
+                <div class="code-block">I'm applying for [Position Title] at [Company Name]. Here is the full job description:
+
+[PASTE JOB DESCRIPTION]
+
+Using my uploaded resume and the Harvard guide, please:
+
+1. KEYWORD ANALYSIS
+2. RESUME TAILORING
+3. GAPS & SOLUTIONS
+4. ATS OPTIMIZATION CHECK
+
+Provide specific, copy-paste-ready content.</div>
+
+                <h4>Cover Letter Generation Prompt</h4>
+                <div class="alert alert-info">
+                    <strong>📝 The Harvard Three-Paragraph Structure:</strong>
+                    <ol style="margin: 10px 0 0 20px;">
+                        <li><strong>Opening:</strong> Why you're writing, name the position, explain fit</li>
+                        <li><strong>Middle:</strong> Your qualifications and how they match needs</li>
+                        <li><strong>Closing:</strong> Thank them, express interest, provide contact</li>
+                    </ol>
+                </div>
+
+                <div class="code-block">Write a professional cover letter for the [Position] role at [Company] using the Harvard three-paragraph structure.
+
+**JOB DESCRIPTION:**
+[Paste full JD]
+
+**CUSTOMIZATION REQUIREMENTS:**
+- Tone: Professional and confident
+- Length: 250-300 words
+- Focus area: [Specific skill to emphasize]
+- Company research: [Any specific company info]
+
+Generate 3 opening sentence options first, then complete the full letter.</div>
+            </div>
+
+            <div class="card">
+                <h3>4. Application Tracking & Organization</h3>
+                
+                <h4>The Job Search Tracker</h4>
+                <p>Create a spreadsheet with these columns:</p>
+                
+                <table>
+                    <tr>
+                        <th>Date Applied</th>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Job Post URL</th>
+                        <th>Hiring Manager</th>
+                        <th>Contact Date</th>
+                        <th>Interview Date</th>
+                        <th>Follow-Up Date</th>
+                        <th>Offer/Rejection</th>
+                        <th>Notes</th>
+                    </tr>
+                </table>
+
+                <h4>Recommended Weekly Targets</h4>
+                <ul>
+                    <li><strong>Week 1-2:</strong> 15-20 applications (casting wide net)</li>
+                    <li><strong>Week 3-4:</strong> 10-15 applications (more targeted)</li>
+                    <li><strong>Week 5+:</strong> 5-10 new applications + focus on following up</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>5. Application Automation Strategy</h3>
+                
+                <h4>The Reality of Volume</h4>
+                <ul>
+                    <li>Average job search: <strong>100-200 applications</strong> to get 1 offer</li>
+                    <li>Entry-level roles: <strong>200-400 applications</strong> not uncommon</li>
+                    <li>Response rate: <strong>2-3%</strong> on average</li>
+                </ul>
+
+                <h4>The 70/20/10 Rule</h4>
+                <ul>
+                    <li><strong>70%</strong> of effort on targeted applications</li>
+                    <li><strong>20%</strong> on networking and outreach</li>
+                    <li><strong>10%</strong> on volume/spray-and-pray</li>
+                </ul>
+
+                <h4>Application Quality Tiers</h4>
+                <div class="alert alert-success">
+                    <strong>🎯 TIER 1 (Dream Jobs - 20%):</strong><br>
+                    Custom resume, custom cover letter, company research, LinkedIn outreach<br>
+                    <strong>Time:</strong> 2-3 hours per application
+                </div>
+                
+                <div class="alert alert-info">
+                    <strong>🎯 TIER 2 (Good Fits - 60%):</strong><br>
+                    Tailored resume, modified cover letter template, basic research<br>
+                    <strong>Time:</strong> 45-60 minutes per application
+                </div>
+                
+                <div class="alert alert-warning">
+                    <strong>🎯 TIER 3 (Volume Plays - 20%):</strong><br>
+                    Standard resume, template cover letter, LinkedIn Easy Apply<br>
+                    <strong>Time:</strong> 10-15 minutes per application
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 3: Intelligence -->
+        <section id="phase3" class="section">
+            <div class="section-header">
+                <h2>PHASE 3: INTELLIGENCE GATHERING</h2>
+                <p>Research companies and build strategic relationships</p>
+            </div>
+
+            <div class="card">
+                <h3>6. Company Research & SWOT Analysis</h3>
+                
+                <h4>Master Company Intelligence Prompt</h4>
+                <div class="code-block">I'm applying to [COMPANY NAME] for a [POSITION TITLE] role. I need to get smart quickly.
+
+Please provide a comprehensive analysis:
+
+**PART 1: COMPANY OVERVIEW**
+**PART 2: SWOT ANALYSIS**
+- STRENGTHS
+- WEAKNESSES
+- OPPORTUNITIES
+- THREATS
+**PART 3: COMPETITIVE LANDSCAPE**
+**PART 4: RECENT NEWS & ACHIEVEMENTS**
+**PART 5: EXECUTIVE & LEADERSHIP INSIGHTS**
+**PART 6: CULTURE & VALUES**
+**PART 7: HOW THIS ROLE FITS**
+
+**DELIVERABLE:**
+Create a 1-page "cheat sheet" I can reference before interviews.</div>
+            </div>
+
+            <div class="card">
+                <h3>7. LinkedIn Networking & Decision-Maker Outreach</h3>
+                
+                <div class="alert alert-warning">
+                    <strong>📊 LinkedIn Limits to Know:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li>Connection requests with notes: <strong>300 characters maximum</strong></li>
+                        <li>Connection requests per week (free): <strong>100-150</strong></li>
+                    </ul>
+                </div>
+
+                <h4>Master Outreach Prompt</h4>
+                <div class="code-block">I've applied for this position: [PASTE JOB POSTING]
+
+Please complete the following networking strategy:
+
+**PART 1: DECISION-MAKER IDENTIFICATION**
+Identify 5-8 key people I should connect with:
+1. Hiring Manager (likely title)
+2. Department Head
+3. Recruiter
+4. Team Members (2-3)
+5. HR Business Partner
+
+**PART 2: INITIAL CONNECTION MESSAGES (300 CHARACTERS MAX)**
+For each person, create unique message
+
+**PART 3: FOLLOW-UP SEQUENCE (After Connection Accepted)**
+**PART 4: TIMING PLAN**</div>
+
+                <h4>Example Connection Message (Under 300 Characters)</h4>
+                <div class="code-block">Hi [Name], I just applied for the [Position] role on your team. With [X years] experience in [skill], I'm excited about [Company]'s work in [area]. Would love to connect and learn more. Thanks! - [Your Name]
+
+Character count: 247/300</div>
+            </div>
+        </section>
+
+        <!-- Phase 4: Interviews -->
+        <section id="phase4" class="section">
+            <div class="section-header">
+                <h2>PHASE 4: INTERVIEW PREPARATION</h2>
+                <p>Master the interview process</p>
+            </div>
+
+            <div class="card">
+                <h3>8. Interview Question Intelligence</h3>
+                
+                <h4>Interview Intelligence Prompt</h4>
+                <div class="code-block">I'm preparing for an interview. I need comprehensive analysis.
+
+**MY TAILORED RESUME:**
+[Paste resume]
+
+**JOB DESCRIPTION:**
+[Paste JD]
+
+**COMPANY NAME:** [Company]
+
+---
+
+**PART 1: LIKELY QUESTIONS (15-20 questions)**
+
+**A. BEHAVIORAL (5-7)**
+**B. TECHNICAL/SKILLS (5-7)**
+**C. SITUATIONAL (3-5)**
+**D. CULTURE FIT (2-3)**
+
+**PART 2: RESUME-TO-JOB ALIGNMENT**
+**PART 3: STRENGTH & OPPORTUNITY AREAS**
+**PART 4: STAR STORY BANK**</div>
+            </div>
+
+            <div class="card">
+                <h3>9. Mock Interview Roleplay System</h3>
+                
+                <div class="alert alert-success">
+                    <strong>🎭 Practice Progression:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li><strong>Round 1:</strong> Get comfortable, identify weaknesses (scores: 5-7/10)</li>
+                        <li><strong>Round 2:</strong> Implement feedback, improve STAR structure (scores: 7-8/10)</li>
+                        <li><strong>Round 3:</strong> Polish delivery, tone, enthusiasm (scores: 8-9/10)</li>
+                    </ul>
+                </div>
+
+                <div class="code-block">You are a DUAL-ROLE interview coach for early-career candidates.
+
+**PERSONA 1: Realistic Hiring Manager**
+- Company: [Name]
+- Role: [Title] Hiring Manager
+- Style: Professional, neutral
+
+**PERSONA 2: Supportive Career Coach**
+- Activates ONLY after I answer
+- Constructive, growth-focused feedback
+
+**INTERVIEW STRUCTURE:**
+Ask one question at a time, wait for response, provide feedback, repeat.
+
+**MY MATERIALS:**
+Resume: [Paste]
+JD: [Paste]
+Company: [Name]</div>
+            </div>
+
+            <div class="card">
+                <h3>10. Video Interview Technical Setup</h3>
+                
+                <div class="alert alert-warning">
+                    <strong>⚡ The Stakes:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li><strong>86%</strong> of interviews are now partially/fully virtual</li>
+                        <li><strong>Technical issues</strong> = #1 poor first impression</li>
+                        <li>You have <strong>7 seconds</strong> for visual first impression</li>
+                    </ul>
+                </div>
+
+                <h4>Technical Setup Quick Wins</h4>
+                <table>
+                    <tr>
+                        <th>Element</th>
+                        <th>Best Practice</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Lighting</strong></td>
+                        <td>Face window (natural light from front) or ring light ($15-30)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Camera</strong></td>
+                        <td>Eye level (use books/stand), arm's length away</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Audio</strong></td>
+                        <td>Use headphones with mic, test for echo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Background</strong></td>
+                        <td>Clean, neutral wall or bookshelf</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Internet</strong></td>
+                        <td>Ethernet if possible, phone hotspot as backup</td>
+                    </tr>
+                </table>
+
+                <h4>Pre-Interview Tech Test (24 hours before)</h4>
+                <ul class="checklist">
+                    <li>Join test meeting in platform</li>
+                    <li>Check camera angle/positioning</li>
+                    <li>Test microphone and speakers</li>
+                    <li>Verify background looks professional</li>
+                    <li>Check lighting at same time of day</li>
+                    <li>Test internet speed (5+ Mbps upload needed)</li>
+                    <li>Close unnecessary programs</li>
+                    <li>Charge laptop + have charger plugged in</li>
+                    <li>Silence phone and notifications</li>
+                    <li>Have interviewer's phone number written down</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Phase 5: Follow-Up -->
+        <section id="phase5" class="section">
+            <div class="section-header">
+                <h2>PHASE 5: EXECUTION & FOLLOW-UP</h2>
+                <p>Master the art of strategic follow-up</p>
+            </div>
+
+            <div class="card">
+                <h3>12. The Strategic Thank-You Email System</h3>
+                
+                <div class="alert alert-success">
+                    <strong>💪 Why It's Your Secret Weapon:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li>Increases hiring chances by <strong>up to 40%</strong></li>
+                        <li>Only <strong>24%</strong> of candidates send one</li>
+                        <li><strong>68%</strong> of hiring managers say it affects their decision</li>
+                    </ul>
+                </div>
+
+                <h4>Complete Thank-You Email Prompt</h4>
+                <div class="code-block">I just completed an interview and need a strategic thank-you email.
+
+**INTERVIEW DETAILS:**
+Company: [Name]
+Position: [Title]
+Interviewer: [Name, Title]
+Date: [Date]
+
+**PART 1: MY INTERVIEW NOTES**
+Key Points Mentioned: [List]
+Questions That Generated Discussion: [List]
+Green Flags: [What energized you?]
+My Best Moments: [Which answers resonated?]
+
+**PART 2: COMPANY RESEARCH**
+Recent News: [From pre-interview research]
+
+Write thank-you that:
+1. PROVES I LISTENED (2-3 specific conversation points)
+2. DEMONSTRATES CARE (Show enthusiasm for challenge/project)
+3. ADDS VALUE (Follow-up thought or resource)
+4. BEST PRACTICES (3 paragraphs max, authentic)</div>
+
+                <h4>Timing & Delivery</h4>
+                <ul>
+                    <li><strong>5-6 PM same day</strong> → Top of inbox next morning</li>
+                    <li><strong>7-8 AM next morning</strong> → Fresh start to day</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>13. Following Up Without Being Annoying</h3>
+                
+                <h4>Follow-Up Timeline</h4>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong>Day 0:</strong> Interview
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Day 1:</strong> Thank-you email + LinkedIn connection
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Day 5-7:</strong> First follow-up (if they said "Friday" and it's Monday)
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Day 10-14:</strong> Second follow-up
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Day 21:</strong> Final check-in, then move on
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>14. References Strategy</h3>
+                
+                <h4>The Reference Reality</h4>
+                <ul>
+                    <li>Companies check references for <strong>80%</strong> of final candidates</li>
+                    <li><strong>3-5 professional references</strong> typically required</li>
+                    <li>Often contacted <strong>before</strong> offer</li>
+                </ul>
+
+                <h4>Who to Ask (Priority Order)</h4>
+                <ol>
+                    <li>Direct supervisor/manager (most recent)</li>
+                    <li>Professor from major</li>
+                    <li>Internship/co-op supervisor</li>
+                    <li>Academic advisor/faculty mentor</li>
+                    <li>Volunteer coordinator/nonprofit supervisor</li>
+                    <li>Professional colleague you've worked with directly</li>
+                </ol>
+
+                <div class="alert alert-warning">
+                    <strong>❌ Who NOT to ask:</strong> Family or friends (unless they've directly supervised your work), anyone you haven't spoken to in 2+ years, anyone who might give a lukewarm recommendation, current supervisor (if they don't know you're searching)
+                </div>
+
+                <h4>How to Request a Letter of Recommendation</h4>
+                
+                <h4>Request Letter Prompt for Claude</h4>
+                <div class="code-block">I need to request a letter of recommendation from [Name/Organization].
+
+**CONTEXT:**
+- Relationship: [How you know them - supervisor, professor, volunteer coordinator]
+- When worked together: [Dates/Duration]
+- What they know you for: [Projects, achievements, skills demonstrated]
+- Position applying for: [Title, company, or graduate program]
+- Deadline: [When needed by]
+- Reference contact: [Their current email/organization]
+
+---
+
+Write a professional email request that:
+
+1. **OPENS WITH CONTEXT**
+   - Remind them of your relationship
+   - Mention specific project/time you worked together
+
+2. **MAKES THE ASK CLEAR**
+   - Specific position/program you're applying for
+   - Why you're asking them specifically
+   - What qualities/experiences they can speak to
+
+3. **MAKES IT EASY**
+   - Offer to provide: resume, job description, talking points
+   - Give clear deadline
+   - Explain how they'll be contacted (letter vs. phone reference)
+
+4. **PROVIDES AN OUT**
+   - "If this timing doesn't work, I completely understand"
+   - Let them decline gracefully
+
+5. **INCLUDES FOLLOW-UP INFO**
+   - "The hiring manager may call you directly as a reference"
+   - Provide your contact info for questions
+
+Keep tone: Respectful, appreciative, professional but warm.</div>
+
+                <h4>Example Request Email</h4>
+                <div class="code-block">Subject: Letter of Recommendation Request - [Your Name]
+
+Dear [Name],
+
+I hope this finds you well! I wanted to reach out because I'm in the final stages of applying for a [Position] role at [Company], and I was hoping you might be willing to serve as a reference.
+
+Working with you at [Organization/Project] during [timeframe] was one of my most valuable professional experiences. I'm particularly proud of [specific achievement/project], and I believe your perspective on my [skills/qualities] would be incredibly valuable to this potential employer.
+
+The role focuses on [key responsibilities that align with what you did together], which is exactly the work we collaborated on. I've attached my current resume and the job description for your reference.
+
+If you're comfortable being a reference:
+- The hiring manager may contact you directly via phone or email
+- They typically ask about work quality, reliability, and specific skills
+- I'm happy to provide talking points or additional context
+- Expected timeframe: [within next 2-3 weeks]
+
+I completely understand if now isn't a good time. Either way, I'd love to hear how things are going at [their organization].
+
+Thank you for considering this, and thank you again for the mentorship and support you provided during our time working together.
+
+Best regards,
+[Your Name]
+[Your Phone]
+[Your Email]
+
+**Attachments:** Resume, Job Description</div>
+
+                <h4>Special Case: Requesting from Organizations</h4>
+                
+                <p><strong>For nonprofits, university career centers, or programs:</strong></p>
+                
+                <div class="code-block">Subject: Reference Request - [Your Name], [Program] Alumni
+
+Dear [Organization Name] Team,
+
+I'm writing to request a professional reference as I apply for [Position] opportunities in [field].
+
+I participated in [specific program/volunteer work] from [dates] where I [brief description of your role/contributions]. The skills I developed - particularly [2-3 relevant skills] - are directly applicable to the roles I'm pursuing.
+
+Would [Organization Name] be willing to serve as a professional reference? The hiring managers may contact you via:
+- Phone: [if you have a general line]
+- Email: [their contact email]
+
+I'm happy to provide:
+- Updated resume
+- Specific talking points about my contributions
+- Job descriptions I'm applying for
+
+Expected timeframe: [within 1-2 weeks]
+
+Thank you for the incredible experience and support. The work [Organization] does continues to inspire my career path.
+
+Best regards,
+[Your Name]
+[Phone] | [Email]
+LinkedIn: [your profile]</div>
+
+                <h4>Building Your Reference List (3-5 People)</h4>
+                
+                <div class="alert alert-success">
+                    <strong>✅ Ideal Reference Mix:</strong>
+                    <ol style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Direct Supervisor</strong> - Can speak to work quality, reliability</li>
+                        <li><strong>Professor/Academic</strong> - Can speak to learning ability, intelligence</li>
+                        <li><strong>Nonprofit/Volunteer Supervisor</strong> - Can speak to initiative, values</li>
+                        <li><strong>Professional Colleague</strong> - Can speak to teamwork, collaboration</li>
+                        <li><strong>Program/Organization</strong> - Can speak to program completion, skills developed</li>
+                    </ol>
+                </div>
+
+                <h4>After They Agree - Preparation Package</h4>
+                <div class="code-block">Thank you for agreeing to be a reference!
+
+**REFERENCE INFORMATION SHEET**
+
+**About the Position:**
+Company: [Name]
+Position: [Title]
+Key Requirements: [Top 3-4 skills/experiences]
+
+**How They May Contact You:**
+- Phone: [Your phone]
+- Email: [Your email]
+- Timeframe: [When to expect call]
+- Method: [Phone call or email, typically 5-10 minutes]
+
+**Our Work Together - Key Points:**
+1. [Project/Experience 1]: [Your role, result, what they saw]
+2. [Project/Experience 2]: [Your contribution, impact]
+3. [Skill/Quality they witnessed]: [Specific example]
+
+**Questions They May Ask:**
+- How do you know the candidate?
+- What are their greatest strengths?
+- Can you give an example of [relevant skill]?
+- How did they handle challenges?
+- Would you hire them again/recommend them?
+
+**My Contact Info:**
+Phone: [Your number]
+Email: [Your email]
+
+I'll keep you updated on the process. Thank you again for your support!</div>
+
+                <h4>Important Timing Tips</h4>
+                <ul>
+                    <li><strong>Ask 2-3 weeks before</strong> you need it (people are busy!)</li>
+                    <li><strong>Follow up 1 week before</strong> deadline with a friendly reminder</li>
+                    <li><strong>Let them know immediately</strong> when the hiring manager contacts them</li>
+                    <li><strong>Send thank you</strong> after they provide the reference</li>
+                    <li><strong>Update them on outcome</strong> - whether you got the job or not!</li>
+                </ul>
+
+                <h4>What If They Say No?</h4>
+                <div class="alert alert-info">
+                    <strong>Don't take it personally!</strong> Common reasons:
+                    <ul style="margin-top: 10px;">
+                        <li>Too busy with their own work</li>
+                        <li>Company policy against references</li>
+                        <li>Don't feel they know your work well enough</li>
+                        <li>Haven't worked together recently enough</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Response:</strong> "I completely understand! Thanks for considering it. Would you be able to suggest someone else who might be a good reference?"</p>
+                </div>
+
+                <h4>Maintaining Your Reference List</h4>
+                <ul>
+                    <li><strong>Update annually</strong> - Keep in touch with references</li>
+                    <li><strong>Don't overuse</strong> - Don't have same person do 10+ references</li>
+                    <li><strong>Rotate strategically</strong> - Use different references for different types of roles</li>
+                    <li><strong>Always ask permission</strong> - Even if they've done it before</li>
+                    <li><strong>Show appreciation</strong> - Small thank you note, coffee, LinkedIn recommendation for them</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Phase 6: Offers -->
+        <section id="phase6" class="section">
+            <div class="section-header">
+                <h2>PHASE 6: THE FINISH LINE</h2>
+                <p>Evaluate offers and negotiate like a pro</p>
+            </div>
+
+            <div class="card">
+                <h3>15. Job Offer Evaluation Framework</h3>
+                
+                <h4>The Reality Check - Class of 2025</h4>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Expected salary</td>
+                        <td>$101,500</td>
+                    </tr>
+                    <tr>
+                        <td>Actual average</td>
+                        <td>$68,700</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering</td>
+                        <td>$78,731</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>$76,251</td>
+                    </tr>
+                    <tr>
+                        <td>Business</td>
+                        <td>$65,276</td>
+                    </tr>
+                </table>
+
+                <h4>Beyond the Paycheck - 2025 Benefits</h4>
+                <ul>
+                    <li><strong>42%</strong> received signing bonuses</li>
+                    <li><strong>70%</strong> offer voluntary benefits</li>
+                    <li>Healthcare costs rising <strong>6.7%</strong></li>
+                </ul>
+
+                <h4>Evaluate:</h4>
+                <ul>
+                    <li>Health insurance quality</li>
+                    <li>401(k) match percentage</li>
+                    <li>PTO days (average: 10-15)</li>
+                    <li>Remote/hybrid flexibility</li>
+                    <li>Professional development budget</li>
+                    <li>Tuition reimbursement</li>
+                    <li>Equity/stock options</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>16. Salary Negotiation Strategy</h3>
+                
+                <div class="alert alert-success">
+                    <strong>💰 The Negotiation Reality:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li><strong>18.8%</strong> average increase for those who negotiate</li>
+                        <li><strong>55%</strong> don't try</li>
+                        <li><strong>46%</strong> of ages 18-29 don't feel comfortable asking</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Bottom line:</strong> Negotiation is expected. Companies build room into offers.</p>
+                </div>
+
+                <h4>What to Negotiate Beyond Salary</h4>
+                <p><strong>If they can't move on salary:</strong></p>
+                <ul>
+                    <li>Signing bonus (easier to approve)</li>
+                    <li>Earlier performance review (with written salary adjustment)</li>
+                    <li>Extra PTO (2-5 days)</li>
+                    <li>Remote flexibility (1-2 days/week)</li>
+                    <li>Professional development budget ($1-3K/year)</li>
+                    <li>Relocation assistance</li>
+                    <li>Start date flexibility</li>
+                </ul>
+
+                <h4>When NOT to Negotiate</h4>
+                <div class="alert alert-warning">
+                    <strong>Don't negotiate if:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li>Offer already at/above market for your level</li>
+                        <li>No competing offers, minimal leverage</li>
+                        <li>Highly competitive role with many qualified candidates</li>
+                        <li>Company stated salary non-negotiable</li>
+                        <li>Desperate for job, can't risk losing it</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>17. Accepting & Transitioning</h3>
+                
+                <h4>Acceptance Email Template</h4>
+                <div class="code-block">Subject: Acceptance of [Position] Offer – [Your Name]
+
+Dear [Manager],
+
+I'm thrilled to formally accept the offer for [Position] at [Company]! Thank you for this opportunity—I'm excited to join the team and contribute to [specific goal].
+
+Confirming details:
+- Position: [Title]
+- Start Date: [Date]
+- Salary: $[Amount] annually
+- [Other negotiated terms]
+
+Please let me know next steps regarding paperwork and onboarding.
+
+Thank you for your confidence. I look forward to making an immediate impact.
+
+Best regards,
+[Your Name]</div>
+            </div>
+        </section>
+
+        <!-- Final Words -->
+        <section class="section">
+            <div class="card" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: none;">
+                <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">🎉 Final Words</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 15px;"><strong>You've got this.</strong></p>
+                <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 20px;">Job searching is one of the hardest things you'll do, but with these AI tools and strategies, you're equipped to compete at the highest level—regardless of your background or network.</p>
+                
+                <h3 style="color: white; margin: 30px 0 15px;">Remember:</h3>
+                <ul style="list-style: none; font-size: 1.1rem; line-height: 2;">
+                    <li>✨ Rejection is redirection, not reflection</li>
+                    <li>📈 Small progress is still progress</li>
+                    <li>💎 Your worth isn't determined by your employment status</li>
+                    <li>🎯 The right opportunity is out there</li>
+                </ul>
+                
+                <p style="font-size: 1.5rem; font-weight: 700; margin-top: 40px;">Now go get it. 🚀</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Good luck! You're going to do amazing things.</strong></p>
+        <p style="margin-top: 15px; opacity: 0.8;">© 2025 AI Job Search Playbook - Democratizing Career Success</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+    <script>
+        // Scroll to top functionality
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
